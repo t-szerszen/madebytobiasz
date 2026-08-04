@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -8,9 +9,7 @@ export default function Home() {
 
       <About />
 
-      <section id="projects" className="mx-auto w-full max-w-3xl px-16 py-24">
-        <h2 className="text-2xl font-semibold">Projekty</h2>
-      </section>
+      <Projects />
 
       <section id="contact" className="mx-auto w-full max-w-3xl px-16 py-24">
         <h2 className="text-2xl font-semibold">Kontakt</h2>
