@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -49,7 +50,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           className="bg-grid pointer-events-none fixed inset-0 z-0 opacity-[0.12] dark:opacity-[0.08]"
         />
         <Navbar />
-        <div className="relative z-10 flex flex-1 flex-col">{children}</div>
+        <div className="relative z-10 flex flex-1 flex-col">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
