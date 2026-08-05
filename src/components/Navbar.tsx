@@ -1,3 +1,5 @@
+import ThemeToggle from "@/components/ThemeToggle";
+
 const links = [
   { href: "#about", label: "O mnie" },
   { href: "#projects", label: "Projekty" },
@@ -6,20 +8,24 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black/[.08] bg-white/80 backdrop-blur dark:border-white/[.145] dark:bg-black/80">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-16 py-4">
-        <a href="#hero" className="font-semibold">
-          madebytobiasz
-        </a>
-        <ul className="flex gap-6 text-sm font-medium">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className="hover:opacity-70">
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-border bg-background/85 px-12 py-5 backdrop-blur-[8px]">
+      <a
+        href="#hero"
+        className="font-mono text-[15px] font-bold tracking-tight"
+      >
+        ts<span className="text-accent">_</span>
+      </a>
+      <nav className="flex items-center gap-7">
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="text-sm font-medium text-muted hover:text-foreground hover:no-underline"
+          >
+            {link.label}
+          </a>
+        ))}
+        <ThemeToggle />
       </nav>
     </header>
   );
