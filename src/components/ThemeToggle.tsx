@@ -22,7 +22,7 @@ export default function ThemeToggle() {
       aria-label="Przełącz motyw"
       className="flex h-8 w-8 items-center justify-center border border-border font-mono text-sm text-foreground"
     >
-      {isDark ? "☾" : "☀"}
+      {isDark ? "🌙" : "☀️"}
     </button>
   );
 }
