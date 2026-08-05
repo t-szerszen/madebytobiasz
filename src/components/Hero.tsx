@@ -2,23 +2,36 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-[calc(100vh-73px)] flex-col items-center justify-center gap-4 px-16 text-center"
+      className="flex min-h-[86vh] max-w-[980px] flex-col justify-center px-12"
     >
-      <p className="text-sm uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
-        Full-stack Developer
-      </p>
-      <h1 className="text-4xl font-semibold tracking-tight">
-        Tobiasz Szerszeń
+      <div className="mb-5 font-mono text-sm tracking-wide text-accent">
+        {"// full-stack developer, technikum programistyczne — 5 klasa"}
+      </div>
+      <h1 className="mb-6 text-[64px] font-extrabold leading-[1.05] tracking-tight">
+        Cześć, jestem Tobiasz
+        <span className="animate-[blink_1s_step-end_infinite] text-accent">
+          _
+        </span>
       </h1>
-      <p className="max-w-md text-lg text-zinc-600 dark:text-zinc-400">
-        Uczę się i buduję rzeczy w sieci. Obecnie skupiam się na React i Next.js.
+      <p className="mb-10 max-w-[620px] text-lg leading-relaxed text-muted">
+        18-letni uczeń ZSE-T Leszno, buduję produkty w React i Next.js. To
+        portfolio to dziennik tego, co dotąd zbudowałem — jeden projekt na
+        raz.
       </p>
-      <a
-        href="#projects"
-        className="mt-2 text-sm font-medium underline underline-offset-4 hover:opacity-70"
-      >
-        Zobacz projekty ↓
-      </a>
+      <div className="flex gap-3.5">
+        <a
+          href="#projects"
+          className="border border-foreground bg-foreground px-6 py-3.5 text-[15px] font-semibold text-background no-underline hover:no-underline"
+        >
+          Zobacz projekty
+        </a>
+        <a
+          href="#contact"
+          className="border border-border px-6 py-3.5 text-[15px] font-semibold text-foreground no-underline hover:no-underline"
+        >
+          Napisz do mnie
+        </a>
+      </div>
     </section>
   );
 }
